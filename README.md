@@ -19,7 +19,6 @@ Using this repository you'll enable the following plugins:
 - **nerdtree**  File manager under vim
 - **vim-nerdtree-tabs** Add automatically nerdtree on every new tab.
 - **tcomment_vim** Easily manage comments in every programming language.
-- **lucius theme** My favorite theme for vim. 
 
 Also you'll find a snippets directory with a custom list of [snippet for Puppet](https://github.com/ricciocri/vimrc/blob/master/snippets/puppet.snippets).
 
@@ -28,7 +27,7 @@ Installation
 
 The easiest way it's to clone this repository into your .vim directory (make a backup first if you have something in it).
 
-    git clone https://github.com/ricciocri/vimrc .vim
+    git clone https://github.com/rmueck/vimrc.git .vim
 
 You should see an output similar to this one:
 
@@ -60,6 +59,7 @@ Full .vimrc that enable most of the plugins + nerdtree and tabs + lucius theme +
 
     cd
     ln -s .vim/.vimrc_full .vimrc
+
 
 
 Longer Description of the plugin used:
@@ -171,6 +171,32 @@ TComment can properly handle an embedded syntax, e.g., ruby/python/perl regions 
 
 If you use my .vimrc just select a block of text and use the keys ctrl-- (the key ctrl and 2 times the key -) to add comments/uncomments all the lines.
 
+
+# vim-airline [![Build Status](https://travis-ci.org/vim-airline/vim-airline.png)](https://travis-ci.org/vim-airline/vim-airline)
+
+Lean &amp; mean status/tabline for vim that's light as air.
+
+![img](https://github.com/vim-airline/vim-airline/wiki/screenshots/demo.gif)
+
+# Features
+
+*  Tiny core written with extensibility in mind ([open/closed principle][8]).
+*  Integrates with a variety of plugins, including: [vim-bufferline][6],
+   [fugitive][4], [unite][9], [ctrlp][10], [minibufexpl][15], [gundo][16],
+   [undotree][17], [nerdtree][18], [tagbar][19], [vim-gitgutter][29],
+   [vim-signify][30], [quickfixsigns][39], [syntastic][5], [eclim][34],
+   [lawrencium][21], [virtualenv][31], [tmuxline][35], [taboo.vim][37],
+   [ctrlspace][38], [vim-bufmru][47], [vimagit][50], [denite][51] and more.
+*  Looks good with regular fonts and provides configuration points so you can use unicode or powerline symbols.
+*  Optimized for speed; it loads in under a millisecond.
+*  Extensive suite of themes for popular color schemes including [solarized][23] (dark and light), [tomorrow][24] (all variants), [base16][32] (all variants), [molokai][25], [jellybeans][26] and others.
+ Note these are now external to this plugin. See [below][46] for detail.
+*  Supports 7.2 as the minimum Vim version.
+*  The master branch tries to be as stable as possible, and new features are merged in only after they have gone through a [full regression test][33].
+*  Unit testing suite.
+
+
+
 git submodule
 ---
 
@@ -184,3 +210,4 @@ This project use `git submodule`, to track some of the vim plugin I used:
 - [vim-markdown](https://github.com/plasticboy/vim-markdown)
 - [nerdtree](https://github.com/scrooloose/nerdtree)
 - [tcomment_vim](https://github.com/tomtom/tcomment_vim)
+
