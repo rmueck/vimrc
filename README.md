@@ -172,7 +172,7 @@ TComment can properly handle an embedded syntax, e.g., ruby/python/perl regions 
 If you use my .vimrc just select a block of text and use the keys ctrl-- (the key ctrl and 2 times the key -) to add comments/uncomments all the lines.
 
 
-# vim-airline [![Build Status](https://travis-ci.org/vim-airline/vim-airline.png)](https://travis-ci.org/vim-airline/vim-airline)
+# vim-airline 
 
 Lean &amp; mean status/tabline for vim that's light as air.
 
@@ -210,4 +210,5 @@ This project use `git submodule`, to track some of the vim plugin I used:
 - [vim-markdown](https://github.com/plasticboy/vim-markdown)
 - [nerdtree](https://github.com/scrooloose/nerdtree)
 - [tcomment_vim](https://github.com/tomtom/tcomment_vim)
+- [vim-airline](https://github.com/vim-airline/vim-airline)
 
