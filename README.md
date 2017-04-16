@@ -19,6 +19,7 @@ Using this repository you'll enable the following plugins:
 - **nerdtree**  File manager under vim
 - **vim-nerdtree-tabs** Add automatically nerdtree on every new tab.
 - **tcomment_vim** Easily manage comments in every programming language.
+- **vim-airline** Lean & mean status/tabline for vim that's light as air.
 
 Also you'll find a snippets directory with a custom list of [snippet for Puppet](https://github.com/ricciocri/vimrc/blob/master/snippets/puppet.snippets).
 
@@ -60,6 +61,10 @@ Full .vimrc that enable most of the plugins + nerdtree and tabs + lucius theme +
     cd
     ln -s .vim/.vimrc_full .vimrc
 
+My personal favorite .vimrc
+
+    cd
+    ln -s .vim/.vimrc_rm .vimrc
 
 
 Longer Description of the plugin used:
