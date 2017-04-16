@@ -27,7 +27,14 @@
 	url = https://github.com/scrooloose/nerdtree
 [submodule "bundle/vim-nerdtree-tabs"]
 	path = bundle/vim-nerdtree-tabs
-	url = https://github.com/jistr/vim-nerdtree-tabs
-[submodule "colors/lucius"]
-	path = colors/lucius
-	url =  https://github.com/jonathanfilip/vim-lucius
+  url = https://github.com/jistr/vim-nerdtree-tabs
+[submodule "bundle/vim-colors-gruvbox"]
+	path = bundle/vim-colors-gruvbox
+  url = https://github.com/morhetz/gruvbox.git
+[submodule "bundle/vim-colors-molokai"]
+	path = bundle/vim-colors-molokai
+  url = https://github.com/tomasr/molokai.git
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+  url = https://github.com/altercation/vim-colors-solarized.git
+  
