@@ -185,6 +185,9 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
+set t_Co=256
+colorscheme molokai
+let g:solarized_termcolors=256
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -389,8 +392,10 @@ map <leader>x :e ~/buffer.md<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
-
-
+" Disable Folding for markdown
+"Add the following line to your `.vimrc` to disable the folding configuration:
+let g:vim_markdown_folding_disabled = 1
+let NERDTreeShowHidden=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
