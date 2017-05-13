@@ -157,19 +157,22 @@ set tm=500
 " Add a bit extra margin to the left
 set foldcolumn=1
 
+" Show cursorline
+set cursorline
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable 
-
+let g:bluedrake_256=1
+let g:solarized_termcolors=256
+set background=dark
 try
     colorscheme default
 catch
 endtry
 
-set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -186,8 +189,7 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 set t_Co=256
-colorscheme molokai
-let g:solarized_termcolors=256
+colorscheme bluedrake
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo

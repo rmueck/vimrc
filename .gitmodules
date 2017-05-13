@@ -46,4 +46,10 @@
 [submodule "bundle/vim-snipmate"]
   path = bundle/vim-snipmate
   url = https://github.com/garbas/vim-snipmate.git
+[submodule "bundle/vim-colors-meta5"]
+  path = bundle/vim-colors-meta5
+  url = https://github.com/christophermca/meta5.git
+[submodule "bundle/vim-colors-bluedrake"]
+  path = bundle/vim-colors-bluedrake
+  url = ihttps://github.com/michaelmalick/vim-colors-bluedrake.git
 
