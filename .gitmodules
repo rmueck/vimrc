@@ -51,5 +51,5 @@
   url = https://github.com/christophermca/meta5.git
 [submodule "bundle/vim-colors-bluedrake"]
   path = bundle/vim-colors-bluedrake
-  url = ihttps://github.com/michaelmalick/vim-colors-bluedrake.git
+  url = https://github.com/michaelmalick/vim-colors-bluedrake.git
 
