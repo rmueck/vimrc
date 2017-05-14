@@ -53,3 +53,6 @@
   path = bundle/vim-colors-bluedrake
   url = https://github.com/michaelmalick/vim-colors-bluedrake.git
 
+[submodule "vim-airline-themes"]
+	path = bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
