@@ -64,8 +64,18 @@ filetype indent on
 
 set nocompatible
 set expandtab
-"set smarttab
+set smarttab
 set autoindent
+
+" Disable cursor keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
 
 
 
@@ -190,7 +200,7 @@ set ffs=unix,dos,mac
 
 set t_Co=256
 set background=dark
-colorscheme bluedrake
+colorscheme meta5
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -398,7 +408,11 @@ map <leader>pp :setlocal paste!<cr>
 " Disable Folding for markdown
 "Add the following line to your `.vimrc` to disable the folding configuration:
 let g:vim_markdown_folding_disabled = 1
+
 let NERDTreeShowHidden=1
+autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | wincmd p | endif
+map <C-n> :NERDTreeToggle<CR>
+set formatoptions-=cro
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions

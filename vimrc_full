@@ -1,19 +1,20 @@
+set nocompatible
 call pathogen#infect()
-"set background=dark
+set background=dark
 syntax on
-colorscheme lucius
-LuciusWhite
+colorscheme meta5
+" colorscheme lucius
+"LuciusWhite
 
 set t_Co=256
-set nocompatible
 filetype indent plugin on
 set tabstop=2
 set expandtab
 set smarttab
 set autoindent
 
-let g:NERDTreeDirArrows=0
-if version >= 703
+let g:NERDTreeDirArrows=1
+if version >= 810
  if exists('+colorcolumn')
   set colorcolumn=80
   endif

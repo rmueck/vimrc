@@ -1,6 +1,7 @@
 vimrc
 =====
 
+
 This is my vim configuration to work with Git + Puppet manifests, mostly it's based on some good articles about this that I found online:
 
 1. [Using vim and Debian to do puppet development](https://labs.riseup.net/code/documents/8)
@@ -20,6 +21,7 @@ Using this repository you'll enable the following plugins:
 - **vim-nerdtree-tabs** Add automatically nerdtree on every new tab.
 - **tcomment_vim** Easily manage comments in every programming language.
 - **vim-airline** Lean & mean status/tabline for vim that's light as air.
+- **vim-surround** Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tags, and more. The plugin provides mappings to easily delete, change and add such surroundings in pairs.
 
 Also you'll find a snippets directory with a custom list of [snippet for Puppet](https://github.com/ricciocri/vimrc/blob/master/snippets/puppet.snippets).
 
@@ -216,4 +218,5 @@ This project use `git submodule`, to track some of the vim plugin I used:
 - [nerdtree](https://github.com/scrooloose/nerdtree)
 - [tcomment_vim](https://github.com/tomtom/tcomment_vim)
 - [vim-airline](https://github.com/vim-airline/vim-airline)
+- [vim-surround](https://github.com/tpope/vim-surround)
 
