@@ -123,6 +123,7 @@ set ruler
 
 "Show linenumbers
 set number
+" set relativenumber
 
 
 " Height of the command bar
@@ -144,8 +145,12 @@ set smartcase
 " Highlight search results
 set hlsearch
 
+
+
+exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
+set list
 " Makes search act like search in modern browsers
-set incsearch 
+set incsearch
 
 " Don't redraw while executing macros (good performance config)
 set lazyredraw 
@@ -410,7 +415,7 @@ map <leader>pp :setlocal paste!<cr>
 let g:vim_markdown_folding_disabled = 1
 
 let NERDTreeShowHidden=1
-autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | wincmd p | endif
+" autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | wincmd p | endif
 map <C-n> :NERDTreeToggle<CR>
 set formatoptions-=cro
 
