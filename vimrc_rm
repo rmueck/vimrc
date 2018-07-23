@@ -68,14 +68,14 @@ set smarttab
 set autoindent
 
 " Disable cursor keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
+" noremap <Up> <NOP>
+" noremap <Down> <NOP>
+" noremap <Left> <NOP>
+" noremap <Right> <NOP>
+" inoremap <Up> <NOP>
+" inoremap <Down> <NOP>
+" inoremap <Left> <NOP>
+" inoremap <Right> <NOP>
 
 
 
@@ -235,7 +235,7 @@ set tw=500
 
 set ai "Auto indent
 set si "Smart indent
-set wrap "Wrap lines
+set nowrap "Wrap lines
 
 
 """"""""""""""""""""""""""""""
@@ -418,6 +418,8 @@ let NERDTreeShowHidden=1
 " autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | wincmd p | endif
 map <C-n> :NERDTreeToggle<CR>
 set formatoptions-=cro
+
+set updatetime=100
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
