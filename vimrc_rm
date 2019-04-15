@@ -252,6 +252,8 @@ set si "Smart indent
 " set wrap "Wrap lines
 set nowrap
 set paste
+set nowrap "Wrap lines
+
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -434,6 +436,8 @@ let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
 set formatoptions-=cro
 autocmd BufWritePre *.pp,*.yaml :%s/ \+$//ge
+
+set updatetime=100
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
