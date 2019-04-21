@@ -51,11 +51,11 @@ let g:syntastic_check_on_open  = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_debug=0
-let g:syntastic_puppet_puppetlint_quiet_messages = { "level" : "warnings" }
+" let g:syntastic_puppet_puppetlint_quiet_messages = { "level" : "warnings" }
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General
+"  => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
 set history=5000
@@ -207,6 +207,7 @@ set ffs=unix,dos,mac
 set t_Co=256
 set background=dark
 colorscheme meta5
+" colorscheme peaksea
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -238,7 +239,7 @@ set ai "Auto indent
 set si "Smart indent
 " set wrap "Wrap lines
 set nowrap
-set paste
+set nopaste
 set nowrap "Wrap lines
 
 
@@ -263,7 +264,8 @@ map <space> /
 map <c-space> ?
 
 " Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+" map <silent> <leader><cr> :noh<cr>
+map <silent> <leader>ö :noh<cr>
 
 " Smart way to move between windows
 map <C-j> <C-W>j
