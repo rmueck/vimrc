@@ -52,8 +52,16 @@ let g:syntastic_check_on_wq = 1
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_debug=0
 " let g:syntastic_puppet_puppetlint_quiet_messages = { "level" : "warnings" }
-
-
+"
+" Testing new shell headers
+autocmd bufnewfile *.sh so ~/.vim/shell_header.txt
+autocmd bufnewfile *.sh exe "1," . 20 . "g/File Name :.*/s//File Name : " .expand("%")
+autocmd bufnewfile *.sh exe "1," . 20 . "g/Creation Date :.*/s//Creation Date : " .strftime("%d-%m-%Y")
+autocmd Bufwritepre,filewritepre *.sh execute "normal ma"
+autocmd Bufwritepre,filewritepre *.sh exe "1," . 20 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%c")
+autocmd bufwritepost,filewritepost *.sh execute "normal `a"
+" End test
+"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "  => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -71,6 +79,7 @@ set smarttab
 set autoindent
 
 " Disable cursor keys
+"
 " noremap <Up> <NOP>
 " noremap <Down> <NOP>
 " noremap <Left> <NOP>
@@ -239,7 +248,7 @@ set ai "Auto indent
 set si "Smart indent
 " set wrap "Wrap lines
 set nowrap
-set nopaste
+" set nopaste
 set nowrap "Wrap lines
 
 
@@ -353,9 +362,22 @@ func! DeleteTrailingWS()
   %s/\s\+$//ge
   exe "normal `z"
 endfunc
+
 autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
 autocmd BufWrite *.pp :call DeleteTrailingWS()
+autocmd BufWrite *.sh :call DeleteTrailingWS()
+
+" Header for new shell scripts
+" au bufnewfile *.sh 0r ~/.vim/shell-header.snip
+
+" Define a function that can tell me if a file is executable
+function! FileExecutable (fname)
+  execute "silent! ! test -x" a:fname
+    return v:shell_error
+    endfunction
+" Automatically make Perl and Shell scripts executable if they aren't already
+au BufWritePost *.sh,*.pl,*.cgi,*.ksh if FileExecutable("%:p") | :!chmod a+x %   endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
