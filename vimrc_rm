@@ -53,7 +53,7 @@ let g:syntastic_aggregate_errors = 1
 let g:syntastic_debug=0
 " let g:syntastic_puppet_puppetlint_quiet_messages = { "level" : "warnings" }
 "
-" Testing new shell headers
+" Testing new shell headers bash
 autocmd bufnewfile *.sh so ~/.vim/shell_header.txt
 autocmd bufnewfile *.sh exe "1," . 20 . "g/File Name :.*/s//File Name : " .expand("%")
 autocmd bufnewfile *.sh exe "1," . 20 . "g/Creation Date :.*/s//Creation Date : " .strftime("%d-%m-%Y")
@@ -62,6 +62,14 @@ autocmd Bufwritepre,filewritepre *.sh exe "1," . 20 . "g/Last Modified :.*/s/Las
 autocmd bufwritepost,filewritepost *.sh execute "normal `a"
 " End test
 "
+" Testing new shell headers ksh
+autocmd bufnewfile *.ksh so ~/.vim/shell_header_ksh.txt
+autocmd bufnewfile *.ksh exe "1," . 23 . "g/File Name :.*/s//File Name : " .expand("%")
+autocmd bufnewfile *.ksh exe "1," . 23 . "g/Creation Date :.*/s//Creation Date : " .strftime("%d-%m-%Y")
+autocmd Bufwritepre,filewritepre *.ksh execute "normal ma"
+autocmd Bufwritepre,filewritepre *.ksh exe "1," . 23 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%c")
+autocmd bufwritepost,filewritepost *.ksh execute "normal `a"
+" End test
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "  => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -190,8 +198,8 @@ set cursorline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable 
-let g:bluedrake_256=1
-let g:solarized_termcolors=256
+let g:bluedrake_256=0
+let g:solarized_termcolors=16
 set background=dark
 try
     colorscheme default
@@ -213,9 +221,8 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
-set t_Co=256
-set background=dark
-colorscheme meta5
+set t_Co=16
+colorscheme desert
 " colorscheme peaksea
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

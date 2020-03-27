@@ -1,0 +1,25 @@
+:insert
+#!/usr/bin/ksh93
+#
+set -o pipefail  # give the first not '0' returncode
+set -o nounset   # Same as -u; Treat unset parameters as an error when substituting.
+set -o noclobber # Same as -C; Prevents redirection > from truncating existing files.
+#set -x          # Debug
+#
+###################################################################
+# Purpose: 
+#
+# File Name : 
+#
+# Creation Date : 
+# Last Modified : 
+#
+# Created By : Ruediger Mueck
+# Email :  ruediger.mueck@generali.com
+#
+# History :
+#           v0.0.1 - Initial release
+#
+# Remarks:
+###################################################################
+.
