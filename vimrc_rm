@@ -206,23 +206,14 @@ try
 catch
 endtry
 
-
-" Set extra options when running in GUI mode
-if has("gui_running")
-    set guioptions-=T
-    set guioptions-=e
-    set t_Co=256
-    set guitablabel=%M\ %t
-endif
-
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
-set t_Co=16
-colorscheme desert
+set t_Co=256
+colorscheme gruvbox
 " colorscheme peaksea
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -243,7 +234,7 @@ set expandtab
 " Be smart when using tabs ;)
 set smarttab
 
-" 1 tab == 4 spaces
+" 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
 
@@ -256,7 +247,7 @@ set si "Smart indent
 " set wrap "Wrap lines
 set nowrap
 " set nopaste
-set nowrap "Wrap lines
+set nopaste "no Paste
 
 
 """"""""""""""""""""""""""""""
