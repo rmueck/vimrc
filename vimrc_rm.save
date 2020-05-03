@@ -202,10 +202,13 @@ set cursorline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable 
+let g:bluedrake_256=0
+let g:solarized_termcolors=16
 set background=dark
-set t_Co=256
-let g:bluedrake_256=1
-let g:solarized_termcolors=256
+try
+    colorscheme default
+catch
+endtry
 
 
 " Set extra options when running in GUI mode
@@ -222,12 +225,9 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
-" colorscheme molokai
-colorscheme solarized
+set t_Co=16
+colorscheme desert
 " colorscheme peaksea
-"
-autocmd FileType markdown colorscheme PaperColor
-autocmd FileType markdown set background=light
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
