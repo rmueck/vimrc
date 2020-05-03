@@ -1,5 +1,4 @@
 :insert
 <!-- vim: set spelllang=de,en_us tw=80: -->
-<!-- Header for Markdown files -->
 
 .
