@@ -64,6 +64,6 @@
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
   url = https://github.com/honza/vim-snippets.git
-[submodule "bundle/vim-colors-papercolor"]
-  path = bundle/vim-colors-papercolor
-  url = https://github.com/NLKNguyen/papercolor-theme.git
+[submodule "vim-colors-papercolor"]
+	path = bundle/vim-colors-papercolor
+	url = https://github.com/NLKNguyen/papercolor-theme.git
