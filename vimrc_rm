@@ -226,8 +226,12 @@ set ffs=unix,dos,mac
 colorscheme solarized
 " colorscheme peaksea
 "
-autocmd FileType markdown colorscheme PaperColor
-autocmd FileType markdown set background=light
+augroup markdown
+  " autocmd BufRead  *.md set background=light
+  autocmd FileType markdown set background=light
+  autocmd FileType markdown colorscheme PaperColor
+  autocmd FileType markdown set spell spelllang=de,en tw=80
+augroup END  
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo

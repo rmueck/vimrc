@@ -1,4 +1,10 @@
 :insert
-<!-- vim: set spelllang=de,en_us tw=80: -->
+---
+title: <Title>
+description: <Description>
+tags:
+  - <Tag 1>
+  - <Tag 2>
+---
 
 .
