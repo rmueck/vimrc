@@ -92,14 +92,14 @@ set autoindent
 
 " Disable cursor keys
 "
-" noremap <Up> <NOP>
-" noremap <Down> <NOP>
-" noremap <Left> <NOP>
-" noremap <Right> <NOP>
-" inoremap <Up> <NOP>
-" inoremap <Down> <NOP>
-" inoremap <Left> <NOP>
-" inoremap <Right> <NOP>
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
 
 
 
@@ -203,6 +203,7 @@ set cursorline
 " Enable syntax highlighting
 syntax enable 
 set background=dark
+colorscheme PaperColor
 set t_Co=256
 let g:bluedrake_256=1
 let g:solarized_termcolors=256
@@ -222,16 +223,13 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
-" colorscheme molokai
-colorscheme solarized
-" colorscheme peaksea
 "
 augroup markdown
-  " autocmd BufRead  *.md set background=light
+  autocmd FileType markdown set textwidth=80
   autocmd FileType markdown set background=light
-  autocmd FileType markdown colorscheme PaperColor
-  autocmd FileType markdown set spell spelllang=de,en tw=80
-augroup END  
+  autocmd FileType markdown colorscheme morning
+  autocmd FileType markdown set spell spelllang=de,en
+augroup END
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -247,9 +245,10 @@ set noswapfile
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
 set expandtab
+set softtabstop=2
 
 " Be smart when using tabs ;)
-set smarttab
+set smarttab!
 
 " 1 tab == 4 spaces
 set shiftwidth=2
@@ -261,10 +260,7 @@ set tw=500
 
 set ai "Auto indent
 set si "Smart indent
-" set wrap "Wrap lines
-set nowrap
-" set nopaste
-set nowrap "Wrap lines
+set wrap " wrap lines
 
 
 """"""""""""""""""""""""""""""
@@ -382,9 +378,8 @@ autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
 autocmd BufWrite *.pp :call DeleteTrailingWS()
 autocmd BufWrite *.sh :call DeleteTrailingWS()
-
-" Header for new shell scripts
-" au bufnewfile *.sh 0r ~/.vim/shell-header.snip
+autocmd BufWrite *.md :call DeleteTrailingWS()
+autocmd BufWrite *.yml :call DeleteTrailingWS()
 
 " Define a function that can tell me if a file is executable
 function! FileExecutable (fname)
