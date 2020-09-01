@@ -33,25 +33,25 @@
   url = https://github.com/tomasr/molokai.git
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
-  url = https://github.com/altercation/vim-colors-solarized.git
+        url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/vim-addon-mw-utils"]
-  path = bundle/vim-addon-mw-utils
-  url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+        path = bundle/vim-addon-mw-utils
+        url = https://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule "bundle/tlib_vim"]
-  path = bundle/tlib_vim
-  url = https://github.com/tomtom/tlib_vim.git
+        path = bundle/tlib_vim
+        url = https://github.com/tomtom/tlib_vim.git
 [submodule "bundle/vim-snipmate"]
-  path = bundle/vim-snipmate
-  url = https://github.com/garbas/vim-snipmate.git
+        path = bundle/vim-snipmate
+        url = https://github.com/garbas/vim-snipmate.git
 [submodule "bundle/vim-colors-meta5"]
-  path = bundle/vim-colors-meta5
-  url = https://github.com/christophermca/meta5.git
+        path = bundle/vim-colors-meta5
+        url = https://github.com/christophermca/meta5.git
 [submodule "bundle/vim-colors-bluedrake"]
-  path = bundle/vim-colors-bluedrake
-  url = https://github.com/michaelmalick/vim-colors-bluedrake.git
+        path = bundle/vim-colors-bluedrake
+        url = https://github.com/michaelmalick/vim-colors-bluedrake.git
 [submodule "vim-airline-themes"]
 	path = bundle/vim-airline-themes
-  url = https://github.com/vim-airline/vim-airline-themes.git
+        url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
@@ -63,7 +63,7 @@
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
-  url = https://github.com/honza/vim-snippets.git
+        url = https://github.com/honza/vim-snippets.git
 [submodule "bundle/vim-colors-papercolor"]
 	path = bundle/vim-colors-papercolor
 	url = https://github.com/NLKNguyen/papercolor-theme.git
