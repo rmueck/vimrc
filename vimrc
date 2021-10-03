@@ -32,6 +32,7 @@ set history=5000
 set noerrorbells
 set formatoptions-=cro
 set foldlevel=99
+set foldmethod=indent
 
 "
 " Tabs {{{
@@ -60,10 +61,12 @@ set ignorecase
 " Visual
 set cursorline
 set background=dark
-colorscheme gruvbox
+colorscheme molokai
 set termguicolors
 set scrolloff=8
 set signcolumn=auto
+let g:molokai_original = 1
+
 
 " NERDTree settings {{{
 " Quit on opening files from the tree
