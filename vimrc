@@ -5,9 +5,11 @@
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 "
 " Plugins {{{
+"
 call plug#begin('~/.vim/plugged')
   Plug 'morhetz/gruvbox',
   Plug 'tomasr/molokai',
+  Plug 'altercation/vim-colors-solarized',
   Plug 'mbbill/undotree',
   Plug 'scrooloose/nerdtree',
   Plug 'vim-syntastic/syntastic',
@@ -18,11 +20,11 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 " }}}
 
+" Basic {{{
 syntax on
 filetype plugin indent on
 let mapleader = " "
 let g:mapleader = " "
-
 set exrc
 set number
 set relativenumber
@@ -33,6 +35,9 @@ set noerrorbells
 set formatoptions-=cro
 set foldlevel=99
 set foldmethod=indent
+set smartindent
+set nowrap
+" }}}
 
 " Tabs {{{
 set tabstop=2
@@ -41,9 +46,6 @@ set shiftwidth=2
 set expandtab
 " }}}
 
-set smartindent
-set nowrap
-
 " Backup & Swap {{{
 set noswapfile
 set nobackup
@@ -51,20 +53,23 @@ set undodir=~/.vim/undodir
 set undofile
 " }}}
 
-" Search
+" Search {{{
 set incsearch
 set nohlsearch
 set smartcase
 set ignorecase
+" }}}
 
 " Visual
 set cursorline
 set background=dark
-colorscheme molokai
-" set termguicolors
+let g:solarized_termcolors=256
+set notermguicolors
 set scrolloff=8
 set signcolumn=auto
-let g:molokai_original = 1
+let g:molokai_original = 0
+" colorscheme solarized
+colorscheme molokai
 
 " NERDTree settings {{{
 " Quit on opening files from the tree
@@ -92,7 +97,7 @@ map <leader>k :wincmd k<CR>
 map <leader>l :wincmd l<CR>
 " }}}
 
-augroup folding
+augroup vim_folding
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
@@ -101,7 +106,6 @@ augroup rm_whitespace
   autocmd!
   autocmd BufWritePre * :call DeleteTrailingWS()
 augroup END
-
 
 " -------------------------
 " Functions
