@@ -7,6 +7,7 @@
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
   Plug 'morhetz/gruvbox',
+  Plug 'tomasr/molokai',
   Plug 'mbbill/undotree',
   Plug 'scrooloose/nerdtree',
   Plug 'vim-syntastic/syntastic',
@@ -30,6 +31,8 @@ set guicursor=
 set history=5000
 set noerrorbells
 set formatoptions-=cro
+set foldlevel=99
+
 "
 " Tabs {{{
 set tabstop=2
