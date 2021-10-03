@@ -5,7 +5,6 @@
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 "
 " Plugins {{{
-"
 call plug#begin('~/.vim/plugged')
   Plug 'morhetz/gruvbox',
   Plug 'tomasr/molokai',
@@ -15,7 +14,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-syntastic/syntastic',
   Plug 'vim-airline/vim-airline',
   Plug 'tomtom/tcomment_vim',
-  Plug 'rodjek/vim-puppet',
+  Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
   Plug 'tpope/vim-surround'
 call plug#end()
 " }}}
@@ -60,7 +59,7 @@ set smartcase
 set ignorecase
 " }}}
 
-" Visual
+" Visual {{{
 set cursorline
 set background=dark
 let g:solarized_termcolors=256
@@ -70,6 +69,7 @@ set signcolumn=auto
 let g:molokai_original = 0
 " colorscheme solarized
 colorscheme molokai
+"}}}
 
 " NERDTree settings {{{
 " Quit on opening files from the tree
@@ -78,9 +78,6 @@ let NERDTreeHighlightCursorline=1
 nnoremap <C-t> :NERDTree<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 " }}}
-
-" :W sudo saves the file
-command W w !sudo tee % > /dev/null
 
 " Mapping {{{
 nnoremap <F5> :UndotreeToggle<CR>
@@ -95,8 +92,12 @@ map <leader>h :wincmd h<CR>
 map <leader>j :wincmd j<CR>
 map <leader>k :wincmd k<CR>
 map <leader>l :wincmd l<CR>
+"
+" :W sudo saves the file
+command W w !sudo tee % > /dev/null
 " }}}
 
+" augroups {{{
 augroup vim_folding
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
@@ -106,9 +107,9 @@ augroup rm_whitespace
   autocmd!
   autocmd BufWritePre * :call DeleteTrailingWS()
 augroup END
+" }}}
 
-" -------------------------
-" Functions
+" Functions {{{
 " -------------------------
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 func! DeleteTrailingWS()
@@ -121,4 +122,5 @@ endfunc
 if has("autocmd")
    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+" }}}
 
