@@ -34,7 +34,6 @@ set formatoptions-=cro
 set foldlevel=99
 set foldmethod=indent
 
-"
 " Tabs {{{
 set tabstop=2
 set softtabstop=2
@@ -62,11 +61,10 @@ set ignorecase
 set cursorline
 set background=dark
 colorscheme molokai
-set termguicolors
+" set termguicolors
 set scrolloff=8
 set signcolumn=auto
 let g:molokai_original = 1
-
 
 " NERDTree settings {{{
 " Quit on opening files from the tree
@@ -96,8 +94,7 @@ map <leader>l :wincmd l<CR>
 
 augroup folding
     autocmd!
-    autocmd FileType * setlocal foldmethod=marker
-    " autocmd FileType vim setlocal foldmethod=marker
+    autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
 augroup rm_whitespace
