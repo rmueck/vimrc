@@ -15,7 +15,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline',
   Plug 'tomtom/tcomment_vim',
   Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
-  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-surround',
 call plug#end()
 " }}}
 
@@ -28,7 +28,7 @@ set exrc
 set number
 set relativenumber
 set wildmenu
-set wildmode=list:longest,full
+set wildmode=full
 set guicursor=
 set history=5000
 set noerrorbells
@@ -67,7 +67,7 @@ let g:solarized_termcolors=256
 set notermguicolors
 set scrolloff=8
 set signcolumn=auto
-let g:molokai_original = 1
+let g:molokai_original = 0
 " colorscheme solarized
 colorscheme molokai
 "}}}
