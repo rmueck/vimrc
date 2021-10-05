@@ -16,6 +16,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tomtom/tcomment_vim',
   Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
   Plug 'tpope/vim-surround',
+  Plug 'https://github.com/tpope/vim-fugitive',
 call plug#end()
 " }}}
 
