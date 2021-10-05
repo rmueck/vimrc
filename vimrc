@@ -6,17 +6,19 @@
 "
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
-  Plug 'morhetz/gruvbox',
-  Plug 'tomasr/molokai',
-  Plug 'altercation/vim-colors-solarized',
-  Plug 'mbbill/undotree',
-  Plug 'scrooloose/nerdtree',
-  Plug 'vim-syntastic/syntastic',
-  Plug 'vim-airline/vim-airline',
-  Plug 'tomtom/tcomment_vim',
-  Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
-  Plug 'tpope/vim-surround',
+  Plug 'https://github.com/morhetz/gruvbox',
+  Plug 'https://github.com/tomasr/molokai',
+  Plug 'https://github.com/altercation/vim-colors-solarized',
+  Plug 'https://github.com/mbbill/undotree',
+  Plug 'https://github.com/scrooloose/nerdtree',
+  Plug 'https://github.com/vim-syntastic/syntastic',
+  Plug 'https://github.com/vim-airline/vim-airline',
+  Plug 'https://github.com/vim-airline/vim-airline-themes',
+  Plug 'https://github.com/tomtom/tcomment_vim',
+  Plug 'https://github.com/rodjek/vim-puppet', { 'for': 'puppet' }
+  Plug 'https://github.com/tpope/vim-surround',
   Plug 'https://github.com/tpope/vim-fugitive',
+  Plug 'https://github.com/airblade/vim-gitgutter',
 call plug#end()
 " }}}
 
