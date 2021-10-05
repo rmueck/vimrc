@@ -28,6 +28,7 @@ set exrc
 set number
 set relativenumber
 set wildmenu
+set wildmode=list:longest,full
 set guicursor=
 set history=5000
 set noerrorbells
@@ -66,7 +67,7 @@ let g:solarized_termcolors=256
 set notermguicolors
 set scrolloff=8
 set signcolumn=auto
-let g:molokai_original = 0
+let g:molokai_original = 1
 " colorscheme solarized
 colorscheme molokai
 "}}}
