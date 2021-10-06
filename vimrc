@@ -9,6 +9,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'https://github.com/morhetz/gruvbox',
   Plug 'https://github.com/tomasr/molokai',
   Plug 'https://github.com/altercation/vim-colors-solarized',
+  Plug 'https://github.com/NLKNguyen/papercolor-theme',
+  Plug 'https://github.com/preservim/vim-colors-pencil',
   Plug 'https://github.com/mbbill/undotree',
   Plug 'https://github.com/scrooloose/nerdtree',
   Plug 'https://github.com/vim-syntastic/syntastic',
@@ -72,7 +74,11 @@ set scrolloff=8
 set signcolumn=auto
 let g:molokai_original = 0
 " colorscheme solarized
-colorscheme molokai
+" colorscheme molokai
+" colorscheme gruvbox
+colorscheme PaperColor
+
+" let g:airline_theme='<theme>'
 "}}}
 
 " NERDTree settings {{{
