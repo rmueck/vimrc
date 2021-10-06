@@ -10,7 +10,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'https://github.com/tomasr/molokai',
   Plug 'https://github.com/altercation/vim-colors-solarized',
   Plug 'https://github.com/NLKNguyen/papercolor-theme',
-  Plug 'https://github.com/preservim/vim-colors-pencil',
+  Plug 'https://github.com/zefei/simple-dark',
+  Plug 'https://github.com/jonathanfilip/vim-lucius',
   Plug 'https://github.com/mbbill/undotree',
   Plug 'https://github.com/scrooloose/nerdtree',
   Plug 'https://github.com/vim-syntastic/syntastic',
@@ -68,15 +69,19 @@ set ignorecase
 " Visual {{{
 set cursorline
 set background=dark
+set t_Co=256
 let g:solarized_termcolors=256
+let g:bluedrake_256=1
+let g:molokai_original = 0
 set notermguicolors
 set scrolloff=8
 set signcolumn=auto
-let g:molokai_original = 0
 " colorscheme solarized
 " colorscheme molokai
+" colorscheme PaperColor
 " colorscheme gruvbox
-colorscheme PaperColor
+" colorscheme simple-dark
+colorscheme lucius
 
 " let g:airline_theme='<theme>'
 "}}}
