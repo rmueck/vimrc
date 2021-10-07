@@ -6,12 +6,14 @@
 "
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
+  " Colors
   Plug 'https://github.com/morhetz/gruvbox',
   Plug 'https://github.com/tomasr/molokai',
   Plug 'https://github.com/altercation/vim-colors-solarized',
   Plug 'https://github.com/NLKNguyen/papercolor-theme',
   Plug 'https://github.com/zefei/simple-dark',
   Plug 'https://github.com/jonathanfilip/vim-lucius',
+  " ------------------------------------------------------------
   Plug 'https://github.com/mbbill/undotree',
   Plug 'https://github.com/scrooloose/nerdtree',
   Plug 'https://github.com/vim-syntastic/syntastic',
@@ -42,6 +44,8 @@ set formatoptions-=cro
 set foldlevel=99
 set foldmethod=indent
 set smartindent
+set splitbelow
+set splitright
 set nowrap
 " }}}
 
@@ -80,9 +84,9 @@ set signcolumn=auto
 " colorscheme molokai
 " colorscheme PaperColor
 " colorscheme gruvbox
-" colorscheme simple-dark
-colorscheme lucius
-
+" colorscheme lucius
+colorscheme simple-dark
+let g:airline_theme='lucius'
 " let g:airline_theme='<theme>'
 "}}}
 
@@ -102,12 +106,18 @@ set pastetoggle=<F2>
 nnoremap <Leader>e :e $MYVIMRC<CR>
 " Reload vimr configuration file
 nnoremap <Leader>r :source $MYVIMRC<CR>
+
 " Easy windows navigation!
 map <leader>h :wincmd h<CR>
 map <leader>j :wincmd j<CR>
 map <leader>k :wincmd k<CR>
 map <leader>l :wincmd l<CR>
-"
+
+"------  Buffer Navigation  ------
+noremap <silent> <C-h> :bprev<CR>
+noremap <silent> <C-l> :bnext<CR>
+
+
 " :W sudo saves the file
 command W w !sudo tee % > /dev/null
 " }}}
