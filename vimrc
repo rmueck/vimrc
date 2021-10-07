@@ -14,16 +14,16 @@ call plug#begin('~/.vim/plugged')
   Plug 'https://github.com/zefei/simple-dark',
   Plug 'https://github.com/jonathanfilip/vim-lucius',
   " ------------------------------------------------------------
-  Plug 'https://github.com/mbbill/undotree',
   Plug 'https://github.com/scrooloose/nerdtree',
   Plug 'https://github.com/vim-syntastic/syntastic',
   Plug 'https://github.com/vim-airline/vim-airline',
   Plug 'https://github.com/vim-airline/vim-airline-themes',
   Plug 'https://github.com/tomtom/tcomment_vim',
-  Plug 'https://github.com/rodjek/vim-puppet', { 'for': 'puppet' }
   Plug 'https://github.com/tpope/vim-surround',
   Plug 'https://github.com/tpope/vim-fugitive',
   Plug 'https://github.com/airblade/vim-gitgutter',
+  Plug 'https://github.com/mbbill/undotree',
+  Plug 'https://github.com/rodjek/vim-puppet', { 'for': 'puppet' }
 call plug#end()
 " }}}
 
@@ -37,6 +37,7 @@ set number
 set relativenumber
 set wildmenu
 set wildmode=full
+set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 set guicursor=
 set history=5000
 set noerrorbells
@@ -99,28 +100,30 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 " }}}
 
 " Mapping {{{
+set pastetoggle=<F2>
 nnoremap <F5> :UndotreeToggle<CR>
 nmap <leader>w :w!<cr>
-set pastetoggle=<F2>
+
 " Edit vimrc configuration file
 nnoremap <Leader>e :e $MYVIMRC<CR>
 " Reload vimr configuration file
 nnoremap <Leader>r :source $MYVIMRC<CR>
 
-" Easy windows navigation!
+" :W sudo saves the file
+command W w !sudo tee % > /dev/null
+" }}}
+
+" Navigation {{{
 map <leader>h :wincmd h<CR>
 map <leader>j :wincmd j<CR>
 map <leader>k :wincmd k<CR>
 map <leader>l :wincmd l<CR>
 
-"------  Buffer Navigation  ------
+" Buffer Navigation
 noremap <silent> <C-h> :bprev<CR>
 noremap <silent> <C-l> :bnext<CR>
-
-
-" :W sudo saves the file
-command W w !sudo tee % > /dev/null
 " }}}
+
 
 " augroups {{{
 augroup vim_folding
