@@ -82,13 +82,12 @@ set notermguicolors
 set scrolloff=8
 set signcolumn=auto
 " colorscheme solarized
-" colorscheme molokai
 " colorscheme PaperColor
 " colorscheme gruvbox
 " colorscheme lucius
-colorscheme simple-dark
-let g:airline_theme='lucius'
-" let g:airline_theme='<theme>'
+" colorscheme simple-dark
+colorscheme molokai
+" let g:airline_theme='lucius'
 "}}}
 
 " NERDTree settings {{{
