@@ -80,7 +80,7 @@ let g:bluedrake_256=1
 let g:molokai_original = 0
 set notermguicolors
 set scrolloff=8
-set signcolumn=auto
+set signcolumn=yes
 " colorscheme solarized
 " colorscheme PaperColor
 " colorscheme gruvbox
