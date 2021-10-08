@@ -85,9 +85,9 @@ set signcolumn=auto
 " colorscheme PaperColor
 " colorscheme gruvbox
 " colorscheme lucius
-" colorscheme simple-dark
-colorscheme molokai
-" let g:airline_theme='lucius'
+" colorscheme molokai
+colorscheme simple-dark
+let g:airline_theme='lucius'
 "}}}
 
 " NERDTree settings {{{
