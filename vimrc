@@ -1,8 +1,11 @@
 " Ruediger Mueck vimrc
+"        _
+" __   _(_)_ __ ___  _ __ ___
+" \ \ / / | '_ ` _ \| '__/ __|
+"  \ V /| | | | | | | | | (__
+"   \_/ |_|_| |_| |_|_|  \___|
 "
-" Install plug first!
-"curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-"    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" http://babagit.ddns.net:8080/baba/vimrc.git
 "
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
@@ -150,4 +153,3 @@ if has("autocmd")
    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 " }}}
-
