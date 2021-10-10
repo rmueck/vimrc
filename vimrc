@@ -7,9 +7,19 @@
 "
 " http://babagit.ddns.net:8080/baba/vimrc.git
 "
+" Disable cursor keys {{{
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
+" }}}
+
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
-  " Colors
   Plug 'https://github.com/morhetz/gruvbox',
   Plug 'https://github.com/rmueck/molokai',
   Plug 'https://github.com/altercation/vim-colors-solarized',
@@ -125,7 +135,6 @@ map <leader>l :wincmd l<CR>
 noremap <silent> <C-h> :bprev<CR>
 noremap <silent> <C-l> :bnext<CR>
 " }}}
-
 
 " augroups {{{
 augroup vim_folding
