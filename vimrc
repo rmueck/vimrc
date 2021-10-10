@@ -11,7 +11,8 @@
 call plug#begin('~/.vim/plugged')
   " Colors
   Plug 'https://github.com/morhetz/gruvbox',
-  Plug 'https://github.com/tomasr/molokai',
+  " Plug 'https://github.com/tomasr/molokai',
+  Plug 'https://github.com/rmueck/molokai',
   Plug 'https://github.com/altercation/vim-colors-solarized',
   Plug 'https://github.com/NLKNguyen/papercolor-theme',
   Plug 'https://github.com/zefei/simple-dark',
