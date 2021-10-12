@@ -147,6 +147,9 @@ augroup END
 augroup vim_folding
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
+    autocmd BufWritePost ~/.vimrc    source ~/.vimrc
+    autocmd BufWritePost ~/.vim/vimrc source ~/.vim/vimrc
+    autocmd BufWritePost augroup.vim so ~/.vim/augroup.vim
 augroup END
 
 augroup whitespace
