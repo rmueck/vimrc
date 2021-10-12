@@ -7,17 +7,6 @@
 "
 " http://babagit.ddns.net:8080/baba/vimrc.git
 "
-" Disable cursor keys {{{
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
-" }}}
-
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
   Plug 'https://github.com/morhetz/gruvbox',
@@ -37,6 +26,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'https://github.com/airblade/vim-gitgutter',
   Plug 'https://github.com/mbbill/undotree',
   Plug 'https://github.com/rodjek/vim-puppet', { 'for': 'puppet' }
+  Plug 'https://github.com/plasticboy/vim-markdown', { 'for': 'markdown' }
 call plug#end()
 " }}}
 
@@ -105,7 +95,7 @@ let g:airline_theme='lucius'
 
 " NERDTree settings {{{
 " Quit on opening files from the tree
-let NERDTreeQuitOnOpen=1
+let NERDTreeQuitOnOpen=0
 let NERDTreeHighlightCursorline=1
 nnoremap <C-t> :NERDTree<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
@@ -115,6 +105,18 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 set pastetoggle=<F2>
 nnoremap <F5> :UndotreeToggle<CR>
 nmap <leader>w :w!<cr>
+
+" Disable cursor keys {{{
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
+" }}}
+
 
 " Edit vimrc configuration file
 nnoremap <Leader>e :e $MYVIMRC<CR>
@@ -137,15 +139,30 @@ noremap <silent> <C-l> :bnext<CR>
 " }}}
 
 " augroups {{{
+augroup default
+    autocmd FileType * setlocal background=dark
+    autocmd FileType * colo simple-dark
+augroup END
+
 augroup vim_folding
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
-augroup rm_whitespace
-  autocmd!
-  autocmd BufWritePre * :call DeleteTrailingWS()
+augroup whitespace
+    autocmd!
+    autocmd BufWritePre * :call DeleteTrailingWS()
 augroup END
+
+augroup markdown
+    autocmd!
+    autocmd FileType markdown set textwidth=80
+    autocmd FileType markdown setlocal wrap
+    autocmd FileType markdown setlocal background=light
+    autocmd FileType markdown colo PaperColor
+    autocmd FileType markdown setlocal conceallevel=2
+augroup END
+
 " }}}
 
 " Functions {{{
