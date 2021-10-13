@@ -1,9 +1,3 @@
-" Ruediger Mueck vimrc
-"        _
-" __   _(_)_ __ ___  _ __ ___
-" \ \ / / | '_ ` _ \| '__/ __|
-"  \ V /| | | | | | | | | (__
-"   \_/ |_|_| |_| |_|_|  \___|
 "
 " http://babagit.ddns.net:8080/baba/vimrc.git
 "
@@ -87,9 +81,9 @@ set signcolumn=yes
 " colorscheme solarized
 " colorscheme PaperColor
 " colorscheme gruvbox
-" colorscheme lucius
+colorscheme lucius
 " colorscheme molokai
-colorscheme simple-dark
+" colorscheme simple-dark
 let g:airline_theme='lucius'
 "}}}
 
@@ -106,7 +100,6 @@ set pastetoggle=<F2>
 nnoremap <F5> :UndotreeToggle<CR>
 nmap <leader>w :w!<cr>
 
-" Disable cursor keys {{{
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
