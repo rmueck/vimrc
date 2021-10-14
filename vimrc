@@ -76,15 +76,15 @@ set t_Co=256
 let g:solarized_termcolors=256
 let g:bluedrake_256=1
 let g:molokai_original = 0
-set notermguicolors
+set termguicolors
 set scrolloff=8
 set signcolumn=yes
 " colorscheme solarized
 " colorscheme PaperColor
-" colorscheme gruvbox
-" colorscheme lucius
 " colorscheme molokai
-colorscheme simple-dark
+" colorscheme simple-dark
+" colorscheme gruvbox
+colorscheme lucius
 let g:airline_theme='lucius'
 "}}}
 
@@ -113,15 +113,8 @@ inoremap <Up> <NOP>
 inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
-" }}}
-
-
-" Edit vimrc configuration file
 nnoremap <Leader>e :e $MYVIMRC<CR>
-" Reload vimr configuration file
 nnoremap <Leader>r :source $MYVIMRC<CR>
-
-" :W sudo saves the file
 command W w !sudo tee % > /dev/null
 " }}}
 
@@ -140,7 +133,7 @@ noremap <silent> <C-l> :bnext<CR>
 augroup default
     autocmd!
     autocmd FileType * setlocal background=dark
-    autocmd FileType * colo simple-dark
+    " autocmd FileType * colo simple-dark
 augroup END
 
 augroup vim
