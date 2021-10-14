@@ -25,6 +25,7 @@ call plug#end()
 " }}}
 
 " Basic {{{
+set nocompatible
 syntax on
 filetype plugin indent on
 let mapleader = " "
@@ -81,16 +82,21 @@ set signcolumn=yes
 " colorscheme solarized
 " colorscheme PaperColor
 " colorscheme gruvbox
-colorscheme lucius
+" colorscheme lucius
 " colorscheme molokai
-" colorscheme simple-dark
+colorscheme simple-dark
 let g:airline_theme='lucius'
 "}}}
+
+" Syntastic {{{
+let g:syntastic_check_on_open = 1
+" }}}
 
 " NERDTree settings {{{
 " Quit on opening files from the tree
 let NERDTreeQuitOnOpen=0
 let NERDTreeHighlightCursorline=1
+let NERDTreeIgnore=['\.zip$', '\.pdf$', '\.jpg$', '\.doc$', '\.xls.$']
 nnoremap <C-t> :NERDTree<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 " }}}
@@ -99,7 +105,6 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 set pastetoggle=<F2>
 nnoremap <F5> :UndotreeToggle<CR>
 nmap <leader>w :w!<cr>
-
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
@@ -133,14 +138,15 @@ noremap <silent> <C-l> :bnext<CR>
 
 " augroups {{{
 augroup default
+    autocmd!
     autocmd FileType * setlocal background=dark
     autocmd FileType * colo simple-dark
 augroup END
 
-augroup vim_folding
+augroup vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
-    autocmd BufWritePost ~/.vimrc    source ~/.vimrc
+    " autocmd BufWritePost ~/.vimrc    source ~/.vimrc
     autocmd BufWritePost ~/.vim/vimrc source ~/.vim/vimrc
     autocmd BufWritePost augroup.vim so ~/.vim/augroup.vim
 augroup END
@@ -155,10 +161,9 @@ augroup markdown
     autocmd FileType markdown set textwidth=80
     autocmd FileType markdown setlocal wrap
     autocmd FileType markdown setlocal background=light
-    autocmd FileType markdown colo PaperColor
+    autocmd FileType markdown colo lucius
     autocmd FileType markdown setlocal conceallevel=2
 augroup END
-
 " }}}
 
 " Functions {{{
@@ -175,3 +180,4 @@ if has("autocmd")
    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 " }}}
+
