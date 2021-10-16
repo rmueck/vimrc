@@ -90,6 +90,14 @@ let g:airline_theme='lucius'
 
 " Syntastic {{{
 let g:syntastic_check_on_open = 1
+" let g:syntastic_shell = "/bin/sh"
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open  = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_debug=0
+let g:syntastic_puppet_puppetlint_quiet_messages = { "level" : "warnings" }
 " }}}
 
 " NERDTree settings {{{
