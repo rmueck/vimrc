@@ -76,9 +76,11 @@ set t_Co=256
 let g:solarized_termcolors=256
 let g:bluedrake_256=1
 let g:molokai_original = 0
-set termguicolors
+:if version > 750
+    set signcolumn=yes
+    set termguicolors
+:endif
 set scrolloff=8
-set signcolumn=yes
 " colorscheme solarized
 " colorscheme PaperColor
 " colorscheme molokai
@@ -112,7 +114,9 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 " Mapping {{{
 set pastetoggle=<F2>
 nnoremap <F5> :UndotreeToggle<CR>
+nnoremap <F6> :GitGutterBufferToggle<CR>
 nmap <leader>w :w!<cr>
+command! W w !sudo tee % > /dev/null
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
@@ -123,7 +127,6 @@ inoremap <Left> <NOP>
 inoremap <Right> <NOP>
 nnoremap <Leader>e :e $MYVIMRC<CR>
 nnoremap <Leader>r :source $MYVIMRC<CR>
-command W w !sudo tee % > /dev/null
 " }}}
 
 " Navigation {{{
