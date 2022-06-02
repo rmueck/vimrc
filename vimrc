@@ -21,6 +21,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'https://github.com/mbbill/undotree',
   Plug 'https://github.com/rodjek/vim-puppet', { 'for': 'puppet' }
   Plug 'https://github.com/plasticboy/vim-markdown', { 'for': 'markdown' }
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 " }}}
 
@@ -117,14 +118,14 @@ nnoremap <F5> :UndotreeToggle<CR>
 nnoremap <F6> :GitGutterBufferToggle<CR>
 nmap <leader>w :w!<cr>
 command! W w !sudo tee % > /dev/null
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
+"noremap <Up> <NOP>
+"noremap <Down> <NOP>
+"noremap <Left> <NOP>
+"noremap <Right> <NOP>
+"inoremap <Up> <NOP>
+"inoremap <Down> <NOP>
+"inoremap <Left> <NOP>
+"inoremap <Right> <NOP>
 nnoremap <Leader>e :e $MYVIMRC<CR>
 nnoremap <Leader>r :source $MYVIMRC<CR>
 " }}}
