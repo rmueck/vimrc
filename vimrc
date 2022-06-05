@@ -21,7 +21,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'https://github.com/mbbill/undotree',
   Plug 'https://github.com/rodjek/vim-puppet', { 'for': 'puppet' }
   Plug 'https://github.com/plasticboy/vim-markdown', { 'for': 'markdown' }
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 " }}}
 
