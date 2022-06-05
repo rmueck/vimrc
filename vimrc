@@ -22,6 +22,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'https://github.com/rodjek/vim-puppet', { 'for': 'puppet' }
   Plug 'https://github.com/plasticboy/vim-markdown', { 'for': 'markdown' }
   Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'https://github.com/junegunn/fzf.vim'
 call plug#end()
 " }}}
 
