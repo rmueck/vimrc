@@ -84,12 +84,12 @@ let g:molokai_original = 0
 :endif
 set scrolloff=8
 " colorscheme solarized
-" colorscheme PaperColor
+colorscheme PaperColor
 " colorscheme molokai
 " colorscheme simple-dark
 " colorscheme gruvbox
-colorscheme lucius
-let g:airline_theme='lucius'
+" colorscheme lucius
+" let g:airline_theme='lucius'
 "}}}
 
 " Syntastic {{{
