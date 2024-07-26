@@ -84,8 +84,8 @@ let g:molokai_original = 0
 :endif
 set scrolloff=8
 " colorscheme solarized
-colorscheme PaperColor
-" colorscheme molokai
+" colorscheme PaperColor
+colorscheme molokai
 " colorscheme simple-dark
 " colorscheme gruvbox
 " colorscheme lucius
@@ -166,8 +166,8 @@ augroup markdown
     autocmd!
     autocmd FileType markdown set textwidth=80
     autocmd FileType markdown setlocal wrap
-    autocmd FileType markdown setlocal background=light
-    autocmd FileType markdown colo lucius
+    " autocmd FileType markdown setlocal background=light
+    " autocmd FileType markdown colo lucius
     autocmd FileType markdown setlocal conceallevel=2
 augroup END
 " }}}
