@@ -51,9 +51,9 @@ set nowrap
 " }}}
 
 " Tabs {{{
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 " }}}
 
@@ -80,12 +80,12 @@ let g:bluedrake_256=1
 let g:molokai_original = 0
 :if version > 750
     set signcolumn=yes
-    set termguicolors
+    "set termguicolors
 :endif
 set scrolloff=8
 " colorscheme solarized
-colorscheme PaperColor
-" colorscheme molokai
+" colorscheme PaperColor
+colorscheme molokai
 " colorscheme simple-dark
 " colorscheme gruvbox
 " colorscheme lucius
@@ -171,6 +171,10 @@ augroup markdown
     autocmd FileType markdown setlocal conceallevel=2
 augroup END
 " }}}
+
+" set filetype for shoutcast configs {{{
+au BufRead,BufNewFile sc*.conf set filetype=dosini
+"}}}
 
 " Functions {{{
 " -------------------------
