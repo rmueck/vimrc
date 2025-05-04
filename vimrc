@@ -19,7 +19,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'https://github.com/tpope/vim-fugitive',
   Plug 'https://github.com/airblade/vim-gitgutter',
   Plug 'https://github.com/mbbill/undotree',
-  Plug 'https://github.com/rodjek/vim-puppet', { 'for': 'puppet' }
+  " We do not use puppet anymore.
+  " Plug 'https://github.com/rodjek/vim-puppet', { 'for': 'puppet' }
   Plug 'https://github.com/plasticboy/vim-markdown', { 'for': 'markdown' }
   Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'https://github.com/junegunn/fzf.vim'
@@ -166,8 +167,8 @@ augroup markdown
     autocmd!
     autocmd FileType markdown set textwidth=80
     autocmd FileType markdown setlocal wrap
-    autocmd FileType markdown setlocal background=light
-    autocmd FileType markdown colo lucius
+    " autocmd FileType markdown setlocal background=light
+    " autocmd FileType markdown colo lucius
     autocmd FileType markdown setlocal conceallevel=2
 augroup END
 " }}}

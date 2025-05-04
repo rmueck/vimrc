@@ -23,4 +23,3 @@ git clone https://github.com/rmueck/vimrc ~/.vim
 - Enter command mode and type `PlugInstall`
 - Everything is fine now :)
 
- 
